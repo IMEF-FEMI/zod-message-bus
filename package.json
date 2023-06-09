@@ -1,0 +1,24 @@
+{
+  "name": "zod-message-bus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs, esm --dts",
+    "lint": "tsc",
+    "dev": "vitest",
+    "test": "vitest run",
+    "ci": "pnpm run lint && pnpm run test && pnpm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.14.0",
+    "tsup": "^6.7.0",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "vitest": "^0.32.0"
+  }
+}

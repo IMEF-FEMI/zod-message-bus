@@ -1,5 +1,11 @@
 # zod-message-bus
 
+## 0.1.0
+
+### Minor Changes
+
+- 07f768f: added create message protocol api
+
 ## 0.0.4
 
 ### Patch Changes

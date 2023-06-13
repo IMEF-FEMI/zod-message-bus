@@ -6,14 +6,15 @@ type Prettify<T> = {
 type EventsConfigToDiscriminatedUnion<T extends Record<string, z.ZodRawShape>> = {
     [K in keyof T]: Prettify<{
         type: K;
-    } & z.infer<z.ZodObject<T[K]>>>;
+    } & Omit<z.infer<z.ZodObject<T[K]>>, "type">>;
 }[keyof T];
 
-declare const createMessageProtocol: <T extends Record<string, z.ZodRawShape>, EventsConfigToDiscoUnion = EventsConfigToDiscriminatedUnion<T>>(opts: {
+declare const createMessageProtocol: <T extends Record<string, z.ZodRawShape>, EventAsDiscoUnion extends {
+    type: string;
+} = EventsConfigToDiscriminatedUnion<T>>(opts: {
     events: T;
 }) => {
-    createSender: (func: (event: EventsConfigToDiscoUnion) => void) => (event: EventsConfigToDiscoUnion) => void;
-    createReceiver: (func: (event: EventsConfigToDiscoUnion) => void) => (event: EventsConfigToDiscoUnion) => void;
+    createHandler: (sender: (event: EventAsDiscoUnion) => void) => (event: EventAsDiscoUnion) => void;
 };
 
 export { EventsConfigToDiscriminatedUnion, Prettify, createMessageProtocol };

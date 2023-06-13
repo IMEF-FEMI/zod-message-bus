@@ -11,7 +11,7 @@ const messageBus = createMessageProtocol({
     }
 })
 
-const send = messageBus.createSender(window.postMessage)
+const send = messageBus.createHandler(window.postMessage)
 
 send({
     type: "LOG_OUT"

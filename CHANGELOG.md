@@ -1,5 +1,11 @@
 # zod-message-bus
 
+## 0.1.3
+
+### Patch Changes
+
+- updated readme
+
 ## 0.1.2
 
 ### Patch Changes

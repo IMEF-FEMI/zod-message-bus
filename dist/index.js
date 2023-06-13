@@ -30,7 +30,7 @@ var createMessageProtocol = (opts) => {
     createSender: (func) => {
       return func;
     },
-    createListener: (func) => {
+    createReceiver: (func) => {
       return func;
     }
   };

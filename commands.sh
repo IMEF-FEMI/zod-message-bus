@@ -16,3 +16,4 @@ add .npmignore
 pnpm run ci #before deploying
 pnpm changeset #to add new release changeset (basically a readme file added to the previous )
 pnpm changeset version
+ git add . && git commit -m "added better structure" && git push   

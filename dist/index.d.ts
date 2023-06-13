@@ -13,7 +13,7 @@ declare const createMessageProtocol: <T extends Record<string, z.ZodRawShape>, E
     events: T;
 }) => {
     createSender: (func: (event: EventsConfigToDiscoUnion) => void) => (event: EventsConfigToDiscoUnion) => void;
-    createListener: (func: (event: EventsConfigToDiscoUnion) => void) => (event: EventsConfigToDiscoUnion) => void;
+    createReceiver: (func: (event: EventsConfigToDiscoUnion) => void) => (event: EventsConfigToDiscoUnion) => void;
 };
 
 export { EventsConfigToDiscriminatedUnion, Prettify, createMessageProtocol };

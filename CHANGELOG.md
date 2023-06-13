@@ -1,5 +1,11 @@
 # zod-message-bus
 
+## 0.1.1
+
+### Patch Changes
+
+- changed function name to createReceiver
+
 ## 0.1.0
 
 ### Minor Changes

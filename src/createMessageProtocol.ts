@@ -9,7 +9,7 @@ export const createMessageProtocol = <
         createSender: (func: (event: EventsConfigToDiscoUnion) => void) => {
             return func
         },
-        createListener: (func: (event: EventsConfigToDiscoUnion) => void) => {
+        createReceiver: (func: (event: EventsConfigToDiscoUnion) => void) => {
             return func
         }
     }

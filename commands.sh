@@ -1,5 +1,5 @@
 pnpm init
-tsc --init
+pnpm tsc --init
 
 add src/index.ts
 
